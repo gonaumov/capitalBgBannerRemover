@@ -4,7 +4,8 @@
 // @description  Remove banner requesting installations of add-on for capital.bg site.
 // @author       Georgi Naumov
 // @run-at document-start
-// @match        http://www.capital.bg*
+// @include        http://www.capital.bg*
+// @include        http://www.capital.bg/*
 // @grant        none
 // ==/UserScript==
 (function killToolbar() {
