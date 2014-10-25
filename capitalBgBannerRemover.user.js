@@ -8,10 +8,17 @@
 // @include        http://www.capital.bg/*
 // @grant        none
 // ==/UserScript==
+
+////////////////////////////////////////////////
+// There is a function with name showToolbar 
+// in capital.bg site. The function constructs
+// a banner that asks Chrome users to install 
+// an add-on. We just replace the function. 
+/////////////////////////////////////////////////
 (function killToolbar() {
     if(typeof showToolbar == 'undefined') {
          setTimeout(killToolbar,0);
     } else {
-         window.showToolbar = function() {};   
+         showToolbar = function() {};   
     }
 })();
